@@ -7,27 +7,30 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # This ensures we are inside the nested directory where your files actually live
+    defaults:
+      run:
+        working-directory: ./Kellar-Studios 
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22.x'
-          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm install
 
       - name: Pre-Flight Integrity Check
-        run: |
-          npm install
-          node 45_environment_validator.js # Run your script 45 here
+        run: node 45_environment_validator.js
 
       - name: Sync Security Vault
         env:
           DOTENV_VAULT: ${{ secrets.DOTENV_VAULT }}
-        run: node 48_vault_security_sync.js # Run your script 48 here
+        run: node 48_vault_security_sync.js
 
-      - name: Publish and Deploy
-        run: |
-          npm publish
-          pm2 restart kellar-pipeline --update-env # Final trigger for your studio heartbeat
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Orchestrate Deployment
+        run: node 41_pipeline_controller.js
