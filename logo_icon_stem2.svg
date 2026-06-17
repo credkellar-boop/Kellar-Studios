@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <!-- Icon Block on Left -->
+  <g transform="translate(20, 0) scale(0.4)">
+    <polygon points="250,40 430,130 430,370 250,460 70,370 70,130" fill="#0F172A" stroke="#334155" stroke-width="8"/>
+    <circle cx="250" cy="250" r="150" fill="none" stroke="url(#emeraldGrad)" stroke-width="20" stroke-dasharray="350 120"/>
+    <circle cx="140" cy="140" r="22" fill="#10B981"/>
+    <path d="M200,160 L340,250 L200,340 Z" fill="url(#emeraldGrad)"/>
+  </g>
+  <!-- Primary Branding Font Elements -->
+  <text x="240" y="95" font-family="'Segoe UI', -apple-system, sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" letter-spacing="2">KELLAR-STUDIO</text>
+  <!-- Sub-System Subtitle Typography -->
+  <text x="245" y="145" font-family="monospace" font-size="24" font-weight="bold" fill="#10B981" letter-spacing="8">COMMAND CENTER // AUTONOMOUS ECOSYSTEM</text>
+</svg>
