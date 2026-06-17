@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Processing Luminescence Glow -->
+    <filter id="processingGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Linear Conversion Gradients -->
+    <linearGradient id="transcodeShift" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" /> <!-- Source Emerald -->
+      <stop offset="50%" stop-color="#0EA5E9" /> <!-- Processing Cyan -->
+      <stop offset="100%" stop-color="#6366F1" /> <!-- Target Indigo -->
+    </linearGradient>
+    <linearGradient id="audioSignalGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#EF4444"/> <!-- Broadcast Peak Wall -->
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Matte Dark Web Chassis Base -->
+  <rect width="100%" height="100%" fill="#090D16" rx="16"/>
+
+  <!-- Outer Telemetry Broadcast Ring (Linear Frame Markers) -->
+  <circle cx="250" cy="230" r="160" fill="none" stroke="#1E293B" stroke-width="4" stroke-dasharray="10 15"/>
+  <circle cx="250" cy="230" r="145" fill="none" stroke="#10B981" stroke-width="1" opacity="0.2"/>
+
+  <!-- Video Broadcast Frame Box Target Area [1080p CFR] -->
+  <rect x="130" y="140" width="240" height="180" rx="8" fill="#0F172A" stroke="#334155" stroke-width="3"/>
+  
+  <!-- Outer Video Frame Corner Focus Reticles -->
+  <path d="M 110,150 L 110,120 L 140,120" fill="none" stroke="#0EA5E9" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 390,150 L 390,120 L 360,120" fill="none" stroke="#0EA5E9" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 110,290 L 110,320 L 140,320" fill="none" stroke="#0EA5E9" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 390,290 L 390,320 L 360,320" fill="none" stroke="#0EA5E9" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Centered Conversion Playhead Loops (FFmpeg Transcode Engine Vector) -->
+  <path d="M210,180 L310,230 L210,280 Z" fill="none" stroke="url(#transcodeShift)" stroke-width="8" stroke-linejoin="round" filter="url(#processingGlow)"/>
+  <path d="M210,180 L310,230 L210,280 Z" fill="#090D16" opacity="0.3"/>
+
+  <!-- Integrated Balanced Audio Spectrum (Broadcast Compliance -14 LUFS Ceiling) -->
+  <g transform="translate(150, 230)" fill="url(#audioSignalGrad)">
+    <rect x="0" y="-40" width="6" height="80" rx="3"/>
+    <rect x="12" y="-25" width="6" height="50" rx="3"/>
+    <rect x="24" y="-55" width="6" height="110" rx="3"/>
+    <rect x="36" y="-15" width="6" height="30" rx="3"/>
+    <!-- Center Core Void for Playhead Contrast -->
+    <rect x="158" y="-30" width="6" height="60" rx="3"/>
+    <rect x="170" y="-50" width="6" height="100" rx="3"/>
+    <rect x="182" y="-20" width="6" height="40" rx="3"/>
+    <rect x="194" y="-35" width="6" height="70" rx="3"/>
+  </g>
+
+  <!-- Strict Hard Broadcast Ceiling Limiter Vector Wire -->
+  <line x1="120" y1="165" x2="380" y2="165" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 4" opacity="0.8"/>
+  <text x="375" y="158" font-family="monospace" font-size="10" font-weight="bold" fill="#EF4444" text-anchor="end">-14 LUFS MAX</text>
+
+  <!-- Real-Time Render Metrics Overlay Icons -->
+  <text x="145" y="305" font-family="monospace" font-size="12" font-weight="bold" fill="#10B981">60.00 FPS</text>
+  <text x="355" y="305" font-family="monospace" font-size="12" font-weight="bold" fill="#0EA5E9" text-anchor="end">CFR // 1080p</text>
+
+  <!-- Component Base Functional Metadata Label -->
+  <text x="250" y="435" font-family="monospace" font-size="12" font-weight="bold" fill="#475569" letter-spacing="5" text-anchor="middle">FFMPEG // TRANSCODER_CORE</text>
+</svg>
