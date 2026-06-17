@@ -1,0 +1,22 @@
+# Kellar-Studio Deployment Blueprint
+version: "2026.1"
+
+system:
+  name: "Kellar-Studio-Engine"
+  runtime: "node-v22"
+  memory_limit: "2GB"
+
+scripts:
+  orchestrator: "41_pipeline_controller.js"
+  dashboard: "49_pipeline_dashboard_stub.js"
+  daemon_config: "47_process_daemon.config.js"
+
+deployment:
+  env: "production"
+  auto_restart: true
+  max_memory_restart: "1G"
+  log_path: "./logs/studio.log"
+
+security:
+  encryption: "AES-256"
+  vault_sync: true
