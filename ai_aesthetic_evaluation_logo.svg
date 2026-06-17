@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <filter id="neuralGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <linearGradient id="neuralCoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" /> <stop offset="60%" stop-color="#10B981" /> <stop offset="100%" stop-color="#A855F7" /> </linearGradient>
+    <linearGradient id="gaugeGrad" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#0EA5E9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#090D16" rx="16"/>
+
+  <g stroke="#1E293B" stroke-width="1" opacity="0.2">
+    <circle cx="250" cy="220" r="170" fill="none"/>
+    <circle cx="250" cy="220" r="130" fill="none"/>
+    <line x1="250" y1="30" x2="250" y2="410"/>
+    <line x1="60" y1="220" x2="440" y2="220"/>
+  </g>
+
+  <g stroke="#0EA5E9" stroke-width="1" opacity="0.4" stroke-dasharray="3 3">
+    <line x1="250" y1="220" x2="160" y2="130"/>
+    <line x1="250" y1="220" x2="340" y2="130"/>
+    <line x1="250" y1="220" x2="150" y2="290"/>
+    <line x1="250" y1="220" x2="350" y2="290"/>
+  </g>
+  
+  <circle cx="160" cy="130" r="4" fill="#0EA5E9" filter="url(#neuralGlow)"/>
+  <circle cx="340" cy="130" r="4" fill="#10B981" filter="url(#neuralGlow)"/>
+  <circle cx="150" cy="290" r="4" fill="#A855F7" filter="url(#neuralGlow)"/>
+  <circle cx="350" cy="290" r="4" fill="#0EA5E9" filter="url(#neuralGlow)"/>
+
+  <circle cx="250" cy="220" r="110" fill="none" stroke="#1E293B" stroke-width="10"/>
+  <circle cx="250" cy="220" r="110" fill="none" stroke="url(#gaugeGrad)" stroke-width="10" 
+          stroke-dasharray="691" stroke-dashoffset="50" stroke-linecap="round" filter="url(#neuralGlow)"/>
+
+  <g filter="url(#neuralGlow)">
+    <polygon points="250,150 310,255 190,255" fill="none" stroke="url(#neuralCoreGrad)" stroke-width="4"/>
+    <circle cx="250" cy="220" r="32" fill="#090D16" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="250" cy="220" r="18" fill="url(#neuralCoreGrad)"/>
+  </g>
+
+  <rect x="170" y="320" width="160" height="36" rx="6" fill="#0F172A" stroke="#232934" stroke-width="2"/>
+  <text x="250" y="343" font-family="monospace" font-size="15" font-weight="900" fill="#10B981" text-anchor="middle" letter-spacing="1">Score: 94.2%</text>
+
+  <text x="145" y="115" font-family="monospace" font-size="10" font-weight="bold" fill="#64748b" text-anchor="end">INPUT: RAW_FRAME</text>
+  <text x="355" y="115" font-family="monospace" font-size="10" font-weight="bold" fill="#10B981" text-anchor="start">QC: PASSED</text>
+
+  <text x="250" y="435" font-family="monospace" font-size="12" font-weight="bold" fill="#475569" letter-spacing="5" text-anchor="middle">AI_ENGINE // AESTHETIC_QC</text>
+</svg>
