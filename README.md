@@ -1,4 +1,7 @@
 # 🎼📸🎥🎛️🎚️Kellar-Studio Autonomous Ecosystem
+<p align="center">
+  <img src="unified_studio_pipeline_logo.svg" alt="Profile Image" width="400"/>
+</p>
 
 An enterprise-grade, fully automated media orchestration and system governance engine. This repository manages end-to-end media asset validation, high-performance transcoding pipelines, secure credential synchronization, and self-healing daemon layers.
 
