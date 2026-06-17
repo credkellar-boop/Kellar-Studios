@@ -7,10 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # This ensures we are inside the nested directory where your files actually live
-    defaults:
-      run:
-        working-directory: ./Kellar-Studios 
 
     steps:
       - name: Checkout Repository
