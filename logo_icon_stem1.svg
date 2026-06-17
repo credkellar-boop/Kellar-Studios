@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+  <!-- Background Shield Node -->
+  <polygon points="250,40 430,130 430,370 250,460 70,370 70,130" fill="url(#darkGrad)" stroke="#334155" stroke-width="4"/>
+  <!-- Outer Processing Loop Ring -->
+  <circle cx="250" cy="250" r="150" fill="none" stroke="url(#emeraldGrad)" stroke-width="12" stroke-dasharray="400 100"/>
+  <!-- Automated Node Core Plugs -->
+  <circle cx="140" cy="140" r="16" fill="#10B981"/>
+  <circle cx="360" cy="360" r="16" fill="#10B981"/>
+  <!-- Inner Media Playhead Chevron -->
+  <path d="M200,160 L340,250 L200,340 Z" fill="url(#emeraldGrad)"/>
+  <!-- Central Signal Balance Line -->
+  <line x1="250" y1="40" x2="250" y2="460" stroke="#10B981" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="10 10"/>
+</svg>
