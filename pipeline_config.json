@@ -1,0 +1,12 @@
+{
+  "stages": {
+    "new_file": [
+      "01_nomenclature_validator", 
+      "02_audio_auditor"
+    ],
+    "processed": [
+      "08_webhook_notifier", 
+      "12_notion_calendar_sync"
+    ]
+  }
+}
