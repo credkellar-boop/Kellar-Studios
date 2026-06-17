@@ -1,0 +1,31 @@
+
+===========================================================
+KELLAR-STUDIO’S: MASTER BUS SIGNAL CHAIN TEMPLATE
+===========================================================
+
+[1] Surgical EQ (Fruity Parametric EQ 2)
+    - Goal: Cut mud and subsonic rumble.
+    - Setting: High-pass @ 20-30Hz. Narrow cuts in 200-400Hz range if boxy.
+
+[2] Glue Compressor (Fruity Limiter / Bus Comp)
+    - Goal: Cohesion.
+    - Setting: Ratio 2:1, Attack 20-30ms, Release 50-100ms.
+    - Reduction: 1-2dB max.
+
+[3] Broad Tonal EQ (TDR Nova / Parametric EQ 2)
+    - Goal: Final polish.
+    - Setting: Subtle High-Shelf boost (+0.5dB to +1dB) above 10kHz.
+
+[4] Saturation (Optional)
+    - Goal: Warmth/Character.
+    - Setting: Gentle drive to taste.
+
+[5] Final Limiter (Limiter №6 / Fruity Limiter)
+    - Goal: Loudness.
+    - Setting: Ceiling @ -0.1dB. Increase gain to target levels.
+
+[6] Metering (Voxengo SPAN)
+    - Goal: Visual analysis.
+    - Setting: Monitor frequency balance (0-200Hz focus).
+
+===========================================================
